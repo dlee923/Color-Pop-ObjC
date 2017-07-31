@@ -7,16 +7,25 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
+
+@property (strong, nonatomic) UIWindow *mainWindow;
+@property (strong, nonatomic) ViewController *mainVC;
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    _mainWindow = [[UIWindow alloc] initWithFrame: UIScreen.mainScreen.bounds];
+    [_mainWindow makeKeyAndVisible];
+    _mainVC = [[ViewController alloc] init];
+    [_mainWindow setRootViewController: _mainVC];
+    
     return YES;
 }
 

@@ -10,6 +10,14 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) NSMutableDictionary *viewsDictionary;
+@property (nonatomic) int numberOfColumnsToCreate;
+@property (strong, nonatomic) UIView *selectedCell;
+@property (nonatomic) int sizeOfBlock;
+
+-(void)setUpBlocksOfDifferentColor:(int)numberOfColumns;
+-(UIColor *)assignRandomColor;
+-(void)handleGestureRecognizer:(UIPanGestureRecognizer*)sender;
 
 @end
 
